@@ -11,3 +11,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.navbarBackgroundColor{
+  background-color: rgb(233, 221, 205);
+}

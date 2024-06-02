@@ -1,18 +1,21 @@
 import React from "react";
-import Logo from "../images/Superfry.PNG"
+import { Link } from "react-router-dom";
+import Logo from "../images/Superfry.PNG";
 
-const Navbar = () =>{
+const Navbar = () => {
+    return (
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
+            <img src={Logo} alt="Logo" />
+            <div style={{ display: 'flex', gap: '20px', marginRight: "100px" }}>
+                <ul>
+                    <li><Link to="/">Home</Link></li>
+                </ul>
+                <ul>
+                    <li><Link to="/login">Login</Link></li>
+                </ul>
+            </div>
+        </div>
+    );
+};
 
-    return(
-        <>
-        <li>
-            Home
-        </li>
-        <li>
-            Login
-        </li>
-        </>
-    )
-}
-
-export default Navbar
+export default Navbar;
