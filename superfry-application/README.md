@@ -1,3 +1,6 @@
+# Superfry Application
+
+### This is a example application for a business to log in and create rotas and preform tasks that need to happen within the business
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
