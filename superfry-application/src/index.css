@@ -12,7 +12,7 @@ code {
     monospace;
 }
 
-.navbarBackgroundColor{
+.navbarBackgroundColor {
   background-color: rgb(233, 221, 205);
 }
 
@@ -20,11 +20,11 @@ code {
   background-color: aliceblue;
 } */
 
-.background-custom-g{
+.background-custom-g {
   background-color: #4e8d8f;
 }
 
-.image-container{
+.image-container {
   position: relative;
   width: 100%;
   height: 90.5vh;
@@ -40,16 +40,16 @@ code {
   object-fit: cover;
 }
 
-.overlay{
+.overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(156, 156, 156, 0.5); 
+  background-color: rgba(156, 156, 156, 0.5);
 }
 
-.text-overlay{
+.text-overlay {
   top: 46%;
   text-align: center;
   position: absolute;
@@ -60,10 +60,27 @@ code {
   z-index: 2;
 }
 
-.login-overlay{
+.container-overlay {
+  text-align: center;
+}
+
+.login-overlay {
   position: absolute;
-  left: 45%;
-  top: 40%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-color: #4e8d8f;
   padding: 20px;
+  border-radius: 10px;
 }
+
+label {
+  padding: 5px
+}
+
+input {
+  border-radius: 7px;
+  border: black 1px solid;
+}
+
+button {}
