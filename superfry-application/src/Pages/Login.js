@@ -1,5 +1,6 @@
 import React from "react";
 import picture from "../images/Food.jpg"
+import Button from 'react-bootstrap/Button'
 
 const Login = () =>{
 
@@ -18,8 +19,9 @@ const Login = () =>{
                             <br/>
                             <input type="password"/>
                             <br/>
-                            <button>Login</button>
-
+                            <div className="button-style">
+                            <Button variant="light">Login</Button>
+                            </div>
                         </form>
                         
                 </div>
