@@ -1,12 +1,15 @@
 import React from "react";
 import picture from "../images/Food.jpg"
-<<<<<<< HEAD
-import Button from 'react-bootstrap/Button'
-=======
 import picture2 from "../images/fish.PNG"
->>>>>>> f684ff6a95f2ead87afe9f1a340f4a601b6a6f38
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+
+    const navigate = useNavigate();
+
+    const EmployeePage = () =>{
+        navigate('/EmployeePage')
+    }
 
     return (
         <>
@@ -14,19 +17,6 @@ const Login = () => {
                 <div className="overlay"></div>
                 <img src={picture} alt="Fish and chips" className="homepage-background" />
 
-<<<<<<< HEAD
-                            <br/>
-                            <label>Enter your Password: </label>
-                            <br/>
-                            <input type="password"/>
-                            <br/>
-                            <div className="button-style">
-                            <Button variant="light">Login</Button>
-                            </div>
-                        </form>
-                        
-                </div>
-=======
                 <form className="login-overlay">
                     <img src={picture2}
                         alt="fish"
@@ -41,13 +31,12 @@ const Login = () => {
                         <br />
                         <input type="password" />
                         <br />
-                        <button>Login</button>
+                        <button onClick={EmployeePage}>Login</button>
                     </div>
                 </form>
 
 
             </div>
->>>>>>> f684ff6a95f2ead87afe9f1a340f4a601b6a6f38
         </>
     )
 }

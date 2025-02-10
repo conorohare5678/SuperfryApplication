@@ -71,25 +71,28 @@ code {
   transform: translate(-50%, -50%);
   background-color: #4e8d8f;
   padding: 20px;
-<<<<<<< HEAD
 }
 
 .button-style{
   text-align: center;
   padding: 20px;
 }
-=======
-  border-radius: 10px;
+
+.cardContainer{
+ position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 18rem);
+  gap: 20px;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
 }
 
-label {
-  padding: 5px
+Card{
+  display: inline-block;
+  margin-right: 20px;
 }
-
-input {
-  border-radius: 7px;
-  border: black 1px solid;
-}
-
-button {}
->>>>>>> f684ff6a95f2ead87afe9f1a340f4a601b6a6f38
