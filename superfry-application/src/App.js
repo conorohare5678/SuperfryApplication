@@ -1,18 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navbar from './Components/navbar';
+import SuperfryNavbar from './Components/navbar';
 import Login from './Pages/Login';
 import Homepage from './Pages/Homepage';
+import EmployeePage from './Pages/employeePage';
 
 function App() {
   return (
    <>
+     <SuperfryNavbar />
       <Router>
-            <Navbar />
             <Routes>
-                <Route path="/" component={Homepage} />
-                <Route path="/login" component={Login} />
+                <Route path="/" element={<Homepage/>} />
+                <Route path="/login" element={<Login/>} />
+                <Route path='/EmployeePage' element={<EmployeePage/>}/>
             </Routes>
         </Router>
    </>
