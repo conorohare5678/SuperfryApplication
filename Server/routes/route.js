@@ -11,6 +11,7 @@ app.use(express.json())
 
 //Schema imports
 const User = require('../models/UserDetails')
+const Employee = require('../models/employee')
 
 //Sample user created
 //const createSampleUser = async () =>{
@@ -52,4 +53,9 @@ router.post("/login-user", async (req, res) => {
     }
   });
   
+  router.get('/getEmployeeInfo', async (req, res) => {
+    Employee.find()
+    .then(employeePages => res.json(employeePages))
+    .catch(err => res.json(err))
+  })
   module.exports = router;

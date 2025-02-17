@@ -96,3 +96,9 @@ Card{
   display: inline-block;
   margin-right: 20px;
 }
+
+.logout-button{
+  position: absolute;
+  left:92%;
+  padding: 10px;
+}
