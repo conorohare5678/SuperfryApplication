@@ -73,13 +73,13 @@ code {
   padding: 20px;
 }
 
-.button-style{
+.button-style {
   text-align: center;
   padding: 20px;
 }
 
-.cardContainer{
- position: absolute;
+.cardContainer {
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -92,13 +92,17 @@ code {
   padding: 20px;
 }
 
-Card{
+Card {
   display: inline-block;
   margin-right: 20px;
 }
 
-.logout-button{
+.logout-button {
   position: absolute;
-  left:92%;
+  left: 92%;
   padding: 10px;
+}
+
+.cardIMG {
+  height: 200px;
 }
