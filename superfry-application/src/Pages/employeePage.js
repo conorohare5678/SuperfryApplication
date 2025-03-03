@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from 'axios';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import Button_Navigation from "../Components/buttons/buttons";
 import {useNavigate} from 'react-router-dom';
 
 const EmployeePage = () =>{
@@ -10,11 +11,16 @@ const EmployeePage = () =>{
     const token = window.localStorage.getItem('token');
     const userName = window.localStorage.getItem('userName');
     const [employee, setEmployee] = useState([])
+    const [ButtonName, setButtonName] = useState([])
 
     const logoutButton = () =>{
         window.localStorage.removeItem('token');
         window.localStorage.removeItem('userName')
         navigate("/Login");
+    }
+
+    const NavigatePage = () =>{
+
     }
 
     useEffect(() =>{
@@ -45,7 +51,9 @@ const EmployeePage = () =>{
             <Card.Text>
                 {EmployeePage.text}
             </Card.Text>
-            <Button variant="primary">Go somewhere</Button>
+            <div>
+                <Button_Navigation EmployeePage={ButtonName}/>
+            </div>
         </Card.Body>
         </Card>
         ))}
