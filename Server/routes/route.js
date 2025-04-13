@@ -1,5 +1,5 @@
 const express = require('express');
-const router = express.Router(); 
+const router = express.Router();
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt')
 const jsonwebtoken = require('jsonwebtoken');
@@ -12,6 +12,7 @@ app.use(express.json())
 //Schema imports
 const User = require('../models/UserDetails')
 const Employee = require('../models/employee')
+const EmpDetails = require('../models/empdetails')
 
 //Sample user created
 //const createSampleUser = async () =>{
@@ -31,31 +32,37 @@ const Employee = require('../models/employee')
 
 //login post api
 router.post("/login-user", async (req, res) => {
-    const { userName, password } = req.body;
-  
-    try {
-      const user = await User.findOne({ userName });
-  
-      if (!user) {
-        return res.json({ status: "error", error: "User not found!" });
-      }
-  
-      const isPasswordValid = await bcrypt.compare(password, user.password);
-  
-      if (isPasswordValid) {
-        const token = jsonwebtoken.sign({ userName: user.userName }, JWT_SECRET);
-        res.json({ status: "ok", data: token });
-      } else {
-        res.json({ status: "error", error: "Invalid password" });
-      }
-    } catch (error) {
-      res.json({ status: "error", error: "Internal server error" });
+  const { userName, password } = req.body;
+
+  try {
+    const user = await User.findOne({ userName });
+
+    if (!user) {
+      return res.json({ status: "error", error: "User not found!" });
     }
-  });
-  
-  router.get('/getEmployeeInfo', async (req, res) => {
-    Employee.find()
+
+    const isPasswordValid = await bcrypt.compare(password, user.password);
+
+    if (isPasswordValid) {
+      const token = jsonwebtoken.sign({ userName: user.userName }, JWT_SECRET);
+      res.json({ status: "ok", data: token });
+    } else {
+      res.json({ status: "error", error: "Invalid password" });
+    }
+  } catch (error) {
+    res.json({ status: "error", error: "Internal server error" });
+  }
+});
+
+router.get('/getEmployeeInfo', async (req, res) => {
+  Employee.find()
     .then(employeePages => res.json(employeePages))
     .catch(err => res.json(err))
-  })
-  module.exports = router;
+})
+module.exports = router;
+
+router.get('/getEmpDetails', async (req, res) => {
+  EmpDetails.find()
+    .then(empdetails => res.json(empdetails))
+    .catch(err => res.json(err))
+})
