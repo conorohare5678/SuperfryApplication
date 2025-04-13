@@ -8,8 +8,8 @@ import ActionPage from './Pages/actionPage';
 
 function App() {
   return (
-   <>
-     <SuperfryNavbar />
+    <>
+      <SuperfryNavbar />
       <Router>
             <Routes>
                 <Route path="/" element={<Homepage/>} />
