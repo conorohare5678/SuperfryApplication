@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { useNavigate } from 'react-router-dom';
 import Button_Navigation from "../Components/buttons/buttons";
-import {useNavigate} from 'react-router-dom';
+
 
 const EmployeePage = () => {
 

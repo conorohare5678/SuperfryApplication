@@ -15,20 +15,20 @@ const Employee = require('../models/employee')
 const EmpDetails = require('../models/empdetails')
 
 //Sample user created
-//const createSampleUser = async () =>{
-//  const sampleUser = new User({
-//        id: '1',
-//        firstname: 'John',
-//        lastname: 'Doe',
-//        userName: 'John_Doe',
-//        password: await bcrypt.hash('', 10),
-//        userType: 'admin'
+// const createSampleUser = async () =>{
+//   const sampleUser = new User({
+//         id: '1',
+//         firstname: 'Jake',
+//         lastname: 'Doe',
+//         userName: 'Jake_Doe',
+//         password: await bcrypt.hash('password2000', 10),
+//         userType: 'admin'
 
-//    })
-//    await sampleUser.save()
-//}
+//     })
+//     await sampleUser.save()
+// }
 
-//createSampleUser();
+// createSampleUser();
 
 //login post api
 router.post("/login-user", async (req, res) => {
